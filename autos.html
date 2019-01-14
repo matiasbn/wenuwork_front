@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prueba WenuWork</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./controller/autos.js"></script>
+</head>
+
+<body>
+
+    <h1>Obtener los autos</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-push-2">
+                <hr />
+                <br />
+            </div>
+        </div>
+
+        <div id="autosRow" class="row">
+            <!-- PETS LOAD HERE -->
+        </div>
+    </div>
+    <form id="obtenerTemplate" on method="GET">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="panel panel-default panel-pet">
+                <div class="panel-heading">
+                    <h3 class="panel-title"></h3>
+                </div>
+                <div class="panel-body">
+                    <strong>ID</strong>: <span class="auto-id">ID</span><br />
+                    <strong>Marca</strong>: <span class="auto-marca">Marca</span><br />
+                    <strong>Modelo</strong>: <span class="auto-modelo">Modelo</span><br />
+                    <strong>Año</strong>: <span class="auto-anio">Año</span><br /><br />
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-default btn-obtener" type="button" data-id="0">Obtener</button>
+    </form>
+
+    <h1>Insertar auto</h1>
+    <div id="insertarTemplate">
+        <form action="" method="POST">
+            <label>Marca</label>
+            <input class="marcaPOST" type="text"><br>
+            <label>Modelo</label>
+            <input class="modeloPOST" type="text"><br>
+            <label>Año</label>
+            <input class="anioPOST" type="text"><br>
+            <strong>ID generado</strong>: <span class="id-generado">0</span><br /><br />
+            <input type="button" value="Insertar" class="btn-insertar">
+        </form>
+    </div>
+
+
+    <h1>Editar auto</h1>
+    <form id="editarTemplate">
+        <label>ID</label>
+        <input class="idPUT" type="text"><br>
+        <label>Marca</label>
+        <input class="marcaPUT" type="text"><br>
+        <label>Modelo</label>
+        <input class="modeloPUT" type="text"><br>
+        <label>Año</label>
+        <input class="anioPUT" type="text"><br>
+        <input type="button" value="Editar" class="btn-editar"><br>
+        <strong>ID editado</strong>: <span class="auto-id-editado">ID</span><br />
+        <strong>Marca editado</strong>: <span class="auto-marca-editado">Marca</span><br />
+        <strong>Modelo editado</strong>: <span class="auto-modelo-editado">Modelo</span><br />
+        <strong>Año editado</strong>: <span class="auto-anio-editado">Año</span><br /><br />
+    </form>
+
+    <h1>Eliminar auto</h1>
+    <form id="eliminarTemplate">
+        <label>ID</label>
+        <input class="idEliminado" type="text"><br>
+        <strong>ID eliminado</strong>: <span class="auto-id-eliminado">ID</span><br />
+        <strong>Marca eliminado</strong>: <span class="auto-marca-eliminado">Marca</span><br />
+        <strong>Modelo eliminado</strong>: <span class="auto-modelo-eliminado">Modelo</span><br />
+        <strong>Año eliminado</strong>: <span class="auto-anio-eliminado">Año</span><br /><br />
+        <input type="button" value="Eliminar" class="btn-eliminar">
+    </form>
+</body>
+
+</html>

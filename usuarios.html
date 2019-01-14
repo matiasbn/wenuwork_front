@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prueba WenuWork</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./controller/usuarios.js"></script>
+</head>
+
+<body>
+
+    <h1>Obtener los usuarios</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-push-2">
+                <hr />
+                <br />
+            </div>
+        </div>
+
+        <div id="usuariosRow" class="row">
+            <!-- PETS LOAD HERE -->
+        </div>
+    </div>
+    <form id="obtenerTemplate" on method="GET">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="panel panel-default panel-pet">
+                <div class="panel-heading">
+                    <h3 class="panel-title"></h3>
+                </div>
+                <div class="panel-body">
+                    <strong>ID</strong>: <span class="usuario-id">ID</span><br />
+                    <strong>Nombre</strong>: <span class="usuario-nombre">nombre</span><br />
+                    <strong>rut</strong>: <span class="usuario-rut">rut</span><br />
+                    <strong>Modelo Auto</strong>: <span class="usuario-marca-auto">Modelo Auto</span><br />
+                    <strong>Marca Auto</strong>: <span class="usuario-modelo-auto">Marca Auto</span><br />
+                    <strong>Año Auto</strong>: <span class="usuario-anio-auto">Año Auto</span><br />
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-default btn-obtener" type="button" data-id="0">Obtener</button>
+    </form>
+
+    <h1>Insertar usuario</h1>
+    <div id="insertarTemplate">
+        <form action="" method="POST">
+            <label>Nombre</label>
+            <input class="nombrePOST" type="text"><br>
+            <label>rut</label>
+            <input class="rutPOST" type="text"><br>
+            <label>Marca auto</label>
+            <input class="marcaAutoPOST" type="text"><br>
+            <label>Modelo Auto</label>
+            <input class="modeloAutoPOST" type="text"><br>
+            <label>Año Auto</label>
+            <input class="anioAutoPOST" type="text"><br>
+            <strong>ID generado</strong>: <span class="id-generado">0</span><br /><br />
+            <input type="button" value="Insertar" class="btn-insertar">
+        </form>
+    </div>
+
+
+    <h1>Editar usuario</h1>
+    <form id="editarTemplate">
+        <label>ID</label>
+        <input class="idPUT" type="text"><br>
+        <label>Nombre</label>
+        <input class="nombrePUT" type="text"><br>
+        <label>rut</label>
+        <input class="rutPUT" type="text"><br>
+        <label>Marca auto</label>
+        <input class="marcaAutoPUT" type="text"><br>
+        <label>Modelo Auto</label>
+        <input class="modeloAutoPUT" type="text"><br>
+        <label>Año Auto</label>
+        <input class="anioAutoPUT" type="text"><br>
+        <input type="button" value="Editar" class="btn-editar"><br><br>
+        <strong>ID editado</strong>: <span class="usuario-id-editado">ID</span><br />
+        <strong>nombre editado</strong>: <span class="usuario-nombre-editado">nombre</span><br />
+        <strong>rut editado</strong>: <span class="usuario-rut-editado">rut</span><br />
+        <strong>Auto editado</strong>: <span class="usuario-auto-editado">Auto</span><br /><br />
+    </form>
+
+    <h1>Eliminar usuario</h1>
+    <form id="eliminarTemplate">
+        <label>ID</label>
+        <input class="idEliminado" type="text"><br>
+        <strong>ID eliminado</strong>: <span class="usuario-id-eliminado">ID</span><br />
+        <strong>Nombre eliminado</strong>: <span class="usuario-nombre-eliminado">nombre</span><br />
+        <strong>rut eliminado</strong>: <span class="usuario-rut-eliminado">rut</span><br />
+        <strong>Auto eliminado</strong>: <span class="usuario-auto-eliminado">Auto</span><br /><br />
+        <input type="button" value="Eliminar" class="btn-eliminar">
+    </form>
+</body>
+
+</html>
